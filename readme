@@ -1,0 +1,7 @@
+sudo aptitude -y install python3-venv
+
+python3 -m venv venv
+
+venv/bin/pip install gpiozero RPi.GPIO
+
+venv/bin/pinout
