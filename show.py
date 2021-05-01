@@ -29,12 +29,11 @@ def transform(val, off, fact, min_, max_):
     return x
 
 sensor = DS18S20()
-fan = gpiozero.PWMOutputDevice(pin=18)
 
 cpu_temp = gpiozero.CPUTemperature().temperature
 hdd_temp = sensor.get()
 
-print("cpu: %s, hdd: %s, fan: %s" % (cpu_temp, hdd_temp, fan.value))
+print("cpu: %s, hdd: %s" % (cpu_temp, hdd_temp))
 
     
     
