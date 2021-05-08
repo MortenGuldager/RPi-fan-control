@@ -29,11 +29,11 @@ def transform(val, off, fact, min_, max_):
     return x
 
 sensor = DS18S20()
+while True:
+    cpu_temp = gpiozero.CPUTemperature().temperature
+    hdd_temp = sensor.get()
 
-cpu_temp = gpiozero.CPUTemperature().temperature
-hdd_temp = sensor.get()
+    print("cpu: %s, hdd: %s" % (cpu_temp, hdd_temp))
 
-print("cpu: %s, hdd: %s" % (cpu_temp, hdd_temp))
-
-    
+    time.sleep(10)    
     
